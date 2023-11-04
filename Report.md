@@ -78,7 +78,7 @@ I experimented with different probability thresholds for predicting toxicity and
 | 28.   | Multinomial Naïve Bayes | 0.9       | Non-Toxic Accuracy | 96.81    |
 | 29.   | Complement Naïve Bayes  | 0.9       | Toxic Accuracy     | 67.02    |
 | 30.   | Complement Naïve Bayes  | 0.9       | Non-Toxic Accuracy | 94.29    |
-| ...   | ...                     | ...       | ...                | ...      |
+
 
 
 From the observations, it can be seen that the probability threshold of 0.5, 0.6, and 0.7 work well and give a balanced prediction for toxic and non-toxic datasets. The probability threshold of 0.5 was chosen as it provides the most balanced accuracy for toxic and non-toxic datasets.
