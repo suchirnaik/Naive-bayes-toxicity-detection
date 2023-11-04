@@ -46,16 +46,40 @@ To address this, I used Complement Naïve Bayes, which is effective for imbalanc
 ## Adjusting the Decision Threshold
 
 I experimented with different probability thresholds for predicting toxicity and observed the following:
+| Sl.no | Model                   | Threshold | Dataset            | Accuracy |
+|-------|-------------------------|-----------|--------------------|----------|
+| 1.    | Multinomial Naïve Bayes | 0.5       | Complete Dataset   | 91.75    |
+| 2.    | Complement Naïve Bayes  | 0.5       | Complete Dataset   | 88.59    |
+| 3.    | Multinomial Naïve Bayes | 0.5       | Toxic Accuracy     | 66.86    |
+| 4.    | Multinomial Naïve Bayes | 0.5       | Non-Toxic Accuracy | 94.37    |
+| 5.    | Complement Naïve Bayes  | 0.5       | Toxic Accuracy     | 76.15    |
+| 6.    | Complement Naïve Bayes  | 0.5       | Non-Toxic Accuracy | 89.89    |
+| 7.    | Multinomial Naïve Bayes | 0.6       | Complete Dataset   | 92.02    |
+| 8.    | Complement Naïve Bayes  | 0.6       | Complete Dataset   | 89.31    |
+| 9.    | Multinomial Naïve Bayes | 0.6       | Toxic Accuracy     | 64.46    |
+| 10.   | Multinomial Naïve Bayes | 0.6       | Non-Toxic Accuracy | 94.91    |
+| 11.   | Complement Naïve Bayes  | 0.6       | Toxic Accuracy     | 74.64    |
+| 12.   | Complement Naïve Bayes  | 0.6       | Non-Toxic Accuracy | 90.85    |
+| 13.   | Multinomial Naïve Bayes | 0.7       | Complete Dataset   | 92.25    |
+| 14.   | Complement Naïve Bayes  | 0.7       | Complete Dataset   | 89.98    |
+| 15.   | Multinomial Naïve Bayes | 0.7       | Toxic Accuracy     | 62.0     |
+| 16.   | Multinomial Naïve Bayes | 0.7       | Non-Toxic Accuracy | 95.44    |
+| 17.   | Complement Naïve Bayes  | 0.7       | Toxic Accuracy     | 73.13    |
+| 18.   | Complement Naïve Bayes  | 0.7       | Non-Toxic Accuracy | 91.75    |
+| 19.   | Multinomial Naïve Bayes | 0.8       | Complete Dataset   | 92.53    |
+| 20.   | Complement Naïve Bayes  | 0.8       | Complete Dataset   | 90.82    |
+| 21.   | Multinomial Naïve Bayes | 0.8       | Toxic Accuracy     | 58.83    |
+| 22.   | Multinomial Naïve Bayes | 0.8       | Non-Toxic Accuracy | 96.07    |
+| 23.   | Complement Naïve Bayes  | 0.8       | Toxic Accuracy     | 70.85    |
+| 24.   | Complement Naïve Bayes  | 0.8       | Non-Toxic Accuracy | 92.92    |
+| 25.   | Multinomial Naïve Bayes | 0.9       | Complete Dataset   | 92.74    |
+| 26.   | Complement Naïve Bayes  | 0.9       | Complete Dataset   | 91.69    |
+| 27.   | Multinomial Naïve Bayes | 0.9       | Toxic Accuracy     | 54.0     |
+| 28.   | Multinomial Naïve Bayes | 0.9       | Non-Toxic Accuracy | 96.81    |
+| 29.   | Complement Naïve Bayes  | 0.9       | Toxic Accuracy     | 67.02    |
+| 30.   | Complement Naïve Bayes  | 0.9       | Non-Toxic Accuracy | 94.29    |
+| ...   | ...                     | ...       | ...                | ...      |
 
-| Sl.no | Model                 | Threshold | Dataset            | Accuracy |
-|-------|-----------------------|-----------|--------------------|----------|
-| 1.    | Multinomial Naïve Bayes | 0.5     | Complete Dataset   | 91.75    |
-| 2.    | Complement Naïve Bayes  | 0.5     | Complete Dataset   | 88.59    |
-| 3.    | Multinomial Naïve Bayes | 0.5     | Toxic Accuracy     | 66.86    |
-| 4.    | Multinomial Naïve Bayes | 0.5     | Non-Toxic Accuracy | 94.37    |
-| 5.    | Complement Naïve Bayes  | 0.5     | Toxic Accuracy     | 76.15    |
-| 6.    | Complement Naïve Bayes  | 0.5     | Non-Toxic Accuracy | 89.89    |
-| ...   | ...                   | ...       | ...                | ...      |
 
 From the observations, it can be seen that the probability threshold of 0.5, 0.6, and 0.7 work well and give a balanced prediction for toxic and non-toxic datasets. The probability threshold of 0.5 was chosen as it provides the most balanced accuracy for toxic and non-toxic datasets.
 
